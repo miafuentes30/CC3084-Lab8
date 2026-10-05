@@ -1,21 +1,53 @@
-# Datos: no deben incluirse en el repositorio Git
-data/raw/**
-data/processed/**
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# Datos descargados y derivados, tambien si se conserva una referencia local.
+**/data/raw/**
+**/data/processed/**
+!**/data/raw/.gitkeep
+!**/data/processed/.gitkeep
+*.parquet
+*.duckdb
+*.duckdb.*
+*.db
+*.db.*
+*.sqlite*
+*.part
+*.tmp
+*.temp
+*.log
 
-# Python
+# Ambientes y caches.
 __pycache__/
 *.py[cod]
 .venv/
 venv/
+env/
+.pytest_cache/
 .ipynb_checkpoints/
-
-# Jupyter
 .jupyter/
 .local/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
 
-# Sistema operativo / editores
+# Credenciales.
+.env
+.env.*
+!.env.example
+.aws/
+credentials*
+secrets*
+*.pem
+*.key
+
+# Referencia temporal conservada en disco, no es parte de la entrega activa.
+/lab8/
+
+# Planificación local de commits; no forma parte de la entrega académica.
+/docs/propuesta_commits.md
+/docs/propuesta_commits.json
+
+# Archivos del editor y sistema.
 .DS_Store
 Thumbs.db
 .idea/

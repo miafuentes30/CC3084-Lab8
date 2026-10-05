@@ -9,30 +9,50 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: lab8-lab
     working_dir: /workspace
     ports:
-      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:${LAB_PORT:-8888}:8888"
     volumes:
       - ./data:/workspace/data
       - ./notebooks:/workspace/notebooks
       - ./scripts:/workspace/scripts
       - ./sql:/workspace/sql
       - ./docs:/workspace/docs
+      - ./tests:/workspace/tests
+      - ./README.md:/workspace/README.md:ro
+      - ./Dockerfile:/workspace/Dockerfile:ro
+      - ./metabase.Dockerfile:/workspace/metabase.Dockerfile:ro
+      - ./requirements.txt:/workspace/requirements.txt:ro
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8888/api/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 20s
+    environment:
+      MB_URL: http://metabase:3000
+      MB_EMAIL: ${MB_EMAIL:-}
+      MB_PASSWORD: ${MB_PASSWORD:-}
+      MB_PUBLIC_URL: http://localhost:${METABASE_PORT:-3000}
     restart: unless-stopped
 
   metabase:
     build:
       context: .
       dockerfile: metabase.Dockerfile
-    container_name: lab8-metabase
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:${METABASE_PORT:-3000}:3000"
     volumes:
       - metabase-data:/home/metabase/data
-      - ./data:/workspace/data
+      - ./data:/workspace/data:ro
     environment:
       - MB_DB_FILE=/home/metabase/data/metabase.db
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:3000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
     restart: unless-stopped
 
 volumes:
