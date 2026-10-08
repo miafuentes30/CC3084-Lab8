@@ -1,0 +1,125 @@
+"""Migracion mecanica, ejecutada una sola vez; lab8/ permanece intacto."""
+
+import ast
+import json
+import shutil
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parents[1]
+REFERENCIA = RAIZ / "lab8"
+
+
+def escribir(ruta, texto):
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_text(texto, encoding="utf-8")
+
+
+def main():
+    if (RAIZ / "notebooks").exists():
+        raise SystemExit("La migracion ya se ejecuto; no se sobrescribe el proyecto")
+    for nombre in ("data", "sql", "notebooks"):
+        shutil.copytree(REFERENCIA / nombre, RAIZ / nombre)
+    for nombre in ("Dockerfile", "metabase.Dockerfile", "docker-compose.yml", "requirements.txt", ".dockerignore"):
+        shutil.copy2(REFERENCIA / nombre, RAIZ / nombre)
+    # Extrae el catalogo y el cliente API sin copiar configuracion ni resultados numericos.
+    fuente = (REFERENCIA / "scripts/tablero_metabase.py").read_text(encoding="utf-8")
+    arbol = ast.parse(fuente)
+    catalogo = next(n for n in arbol.body if isinstance(n, ast.Assign) and n.targets[0].id == "INDICADORES")
+    indicadores = ast.literal_eval(catalogo.value)
+    for indicador in indicadores:
+        indicador["interpretacion"] = "Interpretacion pendiente de regenerar con los datos y evidencias del equipo."
+    escribir(RAIZ / "scripts/lab8/catalogo.py", '"""Definiciones de los nueve indicadores; SQL unico en sql/indicadores."""\n\nINDICADORES = ' + repr(indicadores) + "\n")
+    clase = next(n for n in arbol.body if isinstance(n, ast.ClassDef) and n.name == "Metabase")
+    cliente = ast.get_source_segment(fuente, clase)
+    cliente = cliente.replace("def __init__(self, url):", "def __init__(self, url, email, clave, ruta_base):")
+    cliente = cliente.replace("self.url = url", "self.url = url.rstrip('/')\n        self.email = email\n        self.clave = clave\n        self.ruta_base = ruta_base")
+    cliente = cliente.replace("EMAIL", "self.email").replace("CLAVE", "self.clave").replace("BASE_METABASE", "self.ruta_base")
+    escribir(RAIZ / "scripts/lab8/metabase.py", '"""Cliente de Metabase para publicar los indicadores ya calculados."""\n\nimport time\nimport uuid\nimport requests\nfrom .catalogo import INDICADORES\n\nNOMBRE_BASE = "Taxis de Nueva York (DuckDB)"\nNOMBRE_TABLERO = "Viajes de taxi en Nueva York"\n\n' + cliente + "\n")
+    # Las rutas de datos se resuelven en Analisis, con listas explicitas por conjunto.
+    tokens = {"'data/raw/yellow/*/*.parquet'": "{{yellow_files}}",
+              "'data/raw/green/*/*.parquet'": "{{green_files}}",
+              "'data/raw/*/*/*.parquet'": "{{all_files}}",
+              "'data/raw/zonas/taxi_zone_lookup.csv'": "{{zones_file}}"}
+    for ruta in (RAIZ / "sql").rglob("*.sql"):
+        texto = ruta.read_text(encoding="utf-8")
+        for original, nuevo in tokens.items():
+            texto = texto.replace(original, nuevo)
+        texto = texto.replace("glob({{all_files}})", "archivos")
+        escribir(ruta, texto)
+    for comando, modulo in {"download_data": "descarga", "verificar_descarga": "validacion",
+                             "verificar_ambiente": "ambiente", "benchmark": "benchmarks", "tablero_metabase": "indicadores"}.items():
+        escribir(RAIZ / f"scripts/{comando}.py", f'"""Entrada de terminal para lab8.{modulo}."""\n\nfrom lab8.{modulo} import main\n\nif __name__ == "__main__":\n    raise SystemExit(main())\n')
+    bootstrap = '''from pathlib import Path
+import sys
+import platform
+import duckdb
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+raiz = next(p for p in (Path.cwd(), *Path.cwd().parents) if (p / "scripts/lab8").is_dir())
+sys.path.insert(0, str(raiz / "scripts"))
+from lab8.analisis import Analisis
+from lab8.configuracion import Configuracion
+from lab8.notebook import configurar_notebook, ejecutar_script, mostrar_indicador
+from lab8.visualizacion import COLOR, NOMBRE, COLOR_ANIO, MESES, miles
+
+configurar_notebook()
+config = Configuracion.del_entorno()
+'''
+    selecciones = {"03": (2026,), "04": (2026,), "05": (2024, 2026), "07": (2024, 2026), "08": (2024, 2025, 2026)}
+    for ruta in (RAIZ / "notebooks").glob("*.ipynb"):
+        nb = json.loads(ruta.read_text(encoding="utf-8"))
+        prefijo = ruta.name[:2]
+        inicio = bootstrap
+        if prefijo != "06":
+            inicio += f"analisis = Analisis(config, anios={selecciones[prefijo]!r})\ncon = analisis.con\nconsulta = analisis.consulta\n"
+        if prefijo in ("07", "08"):
+            inicio += "from functools import partial\nindicador = partial(mostrar_indicador, analisis)\n"
+        if prefijo == "06":
+            inicio += "from lab8.benchmarks import CONJUNTOS, ruta_base\n"
+        nb["cells"][1]["source"] = inicio.splitlines(keepends=True)
+        for celda in nb["cells"]:
+            texto = "".join(celda["source"])
+            if celda["cell_type"] == "code":
+                celda["outputs"] = []
+                celda["execution_count"] = None
+                if "subprocess.run" in texto:
+                    args = '"--anios", "2024", "2026"' if prefijo == "05" else '"--anios", "2024", "2025", "2026"'
+                    texto = f'ejecutar_script("download_data.py", {args})\n' if "download_data.py" in texto else ""
+                    if "verificar_descarga.py" in "".join(celda["source"]):
+                        texto += f'ejecutar_script("verificar_descarga.py", {args})\n'
+                    texto += "analisis.crear_vistas()\n"
+                if "filas = []" in texto and 'Path("sql").glob' in texto:
+                    patron = "ej[34]/*.sql" if prefijo == "05" else "*/*.sql"
+                    texto = f'revision = analisis.revisar_consultas("{patron}")\nassert revision.estado.eq("ok").all(), revision[revision.estado.ne("ok")]\nrevision\n'
+                texto = texto.replace('vistas = Path("sql/vistas.sql").read_text(encoding="utf-8")\nprint(vistas)\ncon.execute(vistas)', 'analisis.crear_vistas()')
+                texto = texto.replace('pd.read_csv("docs/benchmark_tiempos.csv")', 'pd.read_csv(config.resultados / "benchmark_tiempos.csv")')
+                texto = texto.replace('pd.read_csv("docs/benchmark_tablas.csv")', 'pd.read_csv(config.resultados / "benchmark_tablas.csv")')
+                texto = texto.replace('Path("sql", consulta)', '(config.sql / consulta)')
+                if 'duckdb.connect("data/processed/benchmark_20_meses.duckdb"' in texto:
+                    texto = texto.replace('duckdb.connect("data/processed/benchmark_20_meses.duckdb", read_only=True)', 'duckdb.connect(str(ruta_base(config, "20 meses")), read_only=True)')
+                    texto = texto.replace('parquet = duckdb.connect()\nparquet.execute(Path("sql/vistas.sql").read_text(encoding="utf-8"))', 'sesion_parquet = Analisis(config, periodos=CONJUNTOS["20 meses"])\nparquet = sesion_parquet.con')
+                    texto = texto.replace('tabla.close()', 'tabla.close()\nsesion_parquet.cerrar()')
+                if prefijo == "05" and "con.sql(" in texto:
+                    texto = texto.replace("'data/raw/yellow/*/*.parquet'", "{analisis._lista_sql(analisis.archivos['yellow'])}")
+                    texto = texto.replace('con.sql("SELECT', 'con.sql(f"SELECT')
+                if prefijo == "08" and "mostrar_sql=False" in texto:
+                    texto = texto.replace(', mostrar_sql=False', '')
+            else:
+                if celda != nb["cells"][0]:
+                    texto = "> Referencia historica: las cifras y conclusiones de esta celda deben contrastarse con las nuevas salidas.\n\n" + texto
+                texto = texto.replace("../docs/tablero_2024_2026.png", "../lab8/docs/tablero_2024_2026.png")
+                texto = texto.replace("../docs/tablero_2024_2025_2026.png", "../lab8/docs/tablero_2024_2025_2026.png")
+            celda["source"] = texto.splitlines(keepends=True)
+        nb["cells"][0]["source"] += ["\n\nSalidas eliminadas para regeneracion. Las cifras heredadas son referencia historica, no resultados verificados del equipo.\n"]
+        if prefijo != "06":
+            nb["cells"].append({"cell_type": "code", "metadata": {}, "execution_count": None,
+                                "outputs": [], "source": ["analisis.cerrar()\n"]})
+        escribir(ruta, json.dumps(nb, ensure_ascii=False, indent=1) + "\n")
+    print("Migracion mecanica completada; referencia original conservada en lab8/")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,446 @@
+{
+  "origen": "Carpeta lab8 disponible; no se encontro ZIP adicional en el proyecto",
+  "momento": "Inventario capturado despues de la migracion; referencia conservada en disco",
+  "archivos": [
+    {
+      "ruta": "lab8/.dockerignore",
+      "bytes": 20,
+      "sha256": "a71e190872290469858c812cf0e76ecbe899f90049c54ba652a0e239c5a0a266"
+    },
+    {
+      "ruta": "lab8/.gitignore",
+      "bytes": 359,
+      "sha256": "a77615cfbbf6bf40d59cb592869f58dd766a910a2f7602fd0b82727997faa551"
+    },
+    {
+      "ruta": "lab8/docker-compose.yml",
+      "bytes": 916,
+      "sha256": "65cb68bb08efbf3afb81ce48129a043f037adbe68c03787d3205e9d186028ca8"
+    },
+    {
+      "ruta": "lab8/Dockerfile",
+      "bytes": 715,
+      "sha256": "b7834a8992dc9cde243ddc58ed3c5878fd5f984723c47bc10c375d6883852794"
+    },
+    {
+      "ruta": "lab8/metabase.Dockerfile",
+      "bytes": 1490,
+      "sha256": "8f7c0f436a7cc1ef7aa861aab84ca9c09e7c7cf0e4f5f10fcf39ce51045f7210"
+    },
+    {
+      "ruta": "lab8/README.md",
+      "bytes": 1751,
+      "sha256": "d7d837d294ffeefa42150adff695ddddc0acb8bf4dc8e44f12f9b5867f3a0184"
+    },
+    {
+      "ruta": "lab8/requirements.txt",
+      "bytes": 252,
+      "sha256": "c152950f38ff52b74a084980552029954cfdb52b7e2f05a33b203e8aea4839b2"
+    },
+    {
+      "ruta": "lab8/data/processed/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "lab8/data/raw/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "lab8/docs/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "lab8/docs/ambiente.md",
+      "bytes": 3728,
+      "sha256": "c5bc846b1a7bebc59e425afc419c0fe833922014288327210bd412373f7b0e86"
+    },
+    {
+      "ruta": "lab8/docs/benchmark_tablas.csv",
+      "bytes": 178,
+      "sha256": "3b4ca5cc211638eebe5d3761eb4647c7d7ff97b46a79743f5c45e9e62112c88b"
+    },
+    {
+      "ruta": "lab8/docs/benchmark_tiempos.csv",
+      "bytes": 3579,
+      "sha256": "a557ad30adf24f0263dd7971c75f14a158aeea86e592e6cb5a8bff679111cf02"
+    },
+    {
+      "ruta": "lab8/docs/descarga.md",
+      "bytes": 2194,
+      "sha256": "eeb938540b1ba070dac0cb10dc8365c6186bf78b1a25d6cd145d140243222f1d"
+    },
+    {
+      "ruta": "lab8/docs/descarga_2024.txt",
+      "bytes": 3976,
+      "sha256": "27ea82bf2b52a3db4ed20d5b421f32b2e70090375f2603b8ee8228aa44b15582"
+    },
+    {
+      "ruta": "lab8/docs/descarga_2025.txt",
+      "bytes": 4761,
+      "sha256": "b4809773e3a0d7082500da82f1d7af987240b63dd7b8de16a6d5686ac043bf55"
+    },
+    {
+      "ruta": "lab8/docs/descarga_2026.txt",
+      "bytes": 3819,
+      "sha256": "eb83f1e055aa6c3bbecf227c5c97769d3c8ce5515ba0474a7af7d1f82da719fe"
+    },
+    {
+      "ruta": "lab8/docs/discusion.docx",
+      "bytes": 13992,
+      "sha256": "a95bf5327f398def83960804a0342655bad5526586ebc77ec2116b5b1075ed8d"
+    },
+    {
+      "ruta": "lab8/docs/prueba_errores.txt",
+      "bytes": 1155,
+      "sha256": "04e06d03a31aceac53b3131ad61bbeee74a04e39b1d9f93d28e015b50ce98adb"
+    },
+    {
+      "ruta": "lab8/docs/tablero_2024_2025_2026.png",
+      "bytes": 200648,
+      "sha256": "8ca3a0e04e72ef650f7fb6668ec8a0c854dfccdcc02fa08e87fa2cec3c17f9f0"
+    },
+    {
+      "ruta": "lab8/docs/tablero_2024_2026.png",
+      "bytes": 195415,
+      "sha256": "64efd58b4f42088cac0861401ed5045b4b58687e686eb012789fd8516b74ccd7"
+    },
+    {
+      "ruta": "lab8/docs/verificacion.md",
+      "bytes": 2933,
+      "sha256": "e5361617bf04bb1464ade3d6e2fcf726af291eaf150f28973abf9d038b9edeb3"
+    },
+    {
+      "ruta": "lab8/docs/verificacion_ambiente.txt",
+      "bytes": 498,
+      "sha256": "09f027384de7549c013f714e5212b9bd4d876e8810dcd32f2019627f1bb0f577"
+    },
+    {
+      "ruta": "lab8/docs/verificacion_descarga.csv",
+      "bytes": 4662,
+      "sha256": "f315016f55cf2716c16af90726aa3c0a3ba2e6ebf5b3e177897ef9414a5418a6"
+    },
+    {
+      "ruta": "lab8/docs/referencias_etapas/README_etapa_01.md",
+      "bytes": 520,
+      "sha256": "f9c6089a86b01699e4a85b2e5842bdb3b1586f03e42f959452b6ff9137ee6bd2"
+    },
+    {
+      "ruta": "lab8/docs/referencias_etapas/README_etapa_02.md",
+      "bytes": 497,
+      "sha256": "99014533820bcdde2f9a63b884dc4d7e2a3cf6ddc3d52ef043fadcc0878c2b2a"
+    },
+    {
+      "ruta": "lab8/docs/referencias_etapas/README_etapa_03.md",
+      "bytes": 498,
+      "sha256": "ab16a6ce6cd25279f2a0f1057e438f55e3f259f53dd9f7f7e8af90a5aae1fca5"
+    },
+    {
+      "ruta": "lab8/docs/referencias_etapas/README_etapa_04.md",
+      "bytes": 934,
+      "sha256": "55927ac6f1d7aa8827756af3be2f51db6eb83a43e262d8d45f7d5eaa095c26ca"
+    },
+    {
+      "ruta": "lab8/docs/referencias_etapas/README_etapa_05.md",
+      "bytes": 1086,
+      "sha256": "ebccb8d04d1b4649d45f8bf5a91e4ca71e4004110fb8b66ce56916f2f32a0b30"
+    },
+    {
+      "ruta": "lab8/docs/referencias_etapas/README_etapa_06.md",
+      "bytes": 1363,
+      "sha256": "18c9e6a1f0d6e7ed3816fceed43c28a7206b534723e9f86ae419019c048c7104"
+    },
+    {
+      "ruta": "lab8/notebooks/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "lab8/notebooks/03_consultas_parquet.ipynb",
+      "bytes": 119172,
+      "sha256": "8dc9058a2957d1a71491ce8da5ee1d51436a213e053efb69b454d40837226a2e"
+    },
+    {
+      "ruta": "lab8/notebooks/04_analisis_exploratorio.ipynb",
+      "bytes": 433165,
+      "sha256": "9f1ef3fc1753743d0ec7b16ebd9f5ac538c42960781c65c9f9bb4e516dd888cf"
+    },
+    {
+      "ruta": "lab8/notebooks/05_incorporacion_2024.ipynb",
+      "bytes": 115228,
+      "sha256": "069bb278cd7e88137a7a66029d74fe3fd6eb2017f32bbc9a93bc3a4eb9da01f4"
+    },
+    {
+      "ruta": "lab8/notebooks/06_benchmark.ipynb",
+      "bytes": 158438,
+      "sha256": "dda276dcf087e99e065ed1987d2e5d2ecd106f87568eaf46eacb8ec2812ab773"
+    },
+    {
+      "ruta": "lab8/notebooks/07_indicadores.ipynb",
+      "bytes": 593741,
+      "sha256": "a1c6a6ddedfd14bf538f52721dec2c57f0361cb9e6a6c616c6d79757ff501e0d"
+    },
+    {
+      "ruta": "lab8/notebooks/08_analisis_completo.ipynb",
+      "bytes": 722607,
+      "sha256": "bd13cc0b39eb8e1c6beaa2bc95e3bd2bc9ef0b71c72ea0401af39e65ce49ab4b"
+    },
+    {
+      "ruta": "lab8/scripts/benchmark.py",
+      "bytes": 5107,
+      "sha256": "2025a9a4dac67e09bdb7d269a8e307b1fe94009fb614420f9285f5c6db16d9db"
+    },
+    {
+      "ruta": "lab8/scripts/download_data.py",
+      "bytes": 8338,
+      "sha256": "e86baa0260b21b0d6e421fbc6ce57fc35b5301d955583fed64b1b2b0f4180719"
+    },
+    {
+      "ruta": "lab8/scripts/tablero_metabase.py",
+      "bytes": 12227,
+      "sha256": "ad212bc2ca0a92c28a777f2d77994c9170c22b252e7d4b1a95dd70f1ca3d5aea"
+    },
+    {
+      "ruta": "lab8/scripts/verificar_ambiente.py",
+      "bytes": 1426,
+      "sha256": "93458e892cdf5b62a1ea96c17926f7364d85b94a88de3303186091e8b8959e15"
+    },
+    {
+      "ruta": "lab8/scripts/verificar_descarga.py",
+      "bytes": 3036,
+      "sha256": "5667c5d4f6a7d46bb84576ee901d33b5ef8373919dfbdb80076d7b63c1dcd203"
+    },
+    {
+      "ruta": "lab8/sql/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "lab8/sql/vistas.sql",
+      "bytes": 1963,
+      "sha256": "5e5fae8a586cd935cb3dfff0aed9e22f570d91c45d59e990d536409a15fbc4ad"
+    },
+    {
+      "ruta": "lab8/sql/benchmark/01_conteo.sql",
+      "bytes": 107,
+      "sha256": "84a28ecade756ac03db395f5d1b6a810645f54b275f4432e376d99f2a7c17701"
+    },
+    {
+      "ruta": "lab8/sql/benchmark/02_un_dia.sql",
+      "bytes": 298,
+      "sha256": "f33a38af9d7afa6f6556d9f7ca3c9c496b1864494c1150f363babc76179cff1e"
+    },
+    {
+      "ruta": "lab8/sql/benchmark/03_percentiles_total.sql",
+      "bytes": 291,
+      "sha256": "d4a060279c07f6cbc9d18f3f88c17ecce4567718200dce9ef2a944722c15718b"
+    },
+    {
+      "ruta": "lab8/sql/ej3/01_archivos.sql",
+      "bytes": 371,
+      "sha256": "75c39f40d61be20cb4d8d9060950c4a901685abd51e657e8196334bc3aeef7ab"
+    },
+    {
+      "ruta": "lab8/sql/ej3/02_registros.sql",
+      "bytes": 527,
+      "sha256": "22abb9889feb38a3454d7ee077b2489e6b08797a161abdf6964b691ce0b96067"
+    },
+    {
+      "ruta": "lab8/sql/ej3/03_columnas.sql",
+      "bytes": 709,
+      "sha256": "51d7f89f6f0312ce7c58344c2c4d491bbb8cd3432b3e0105d748a03974717159"
+    },
+    {
+      "ruta": "lab8/sql/ej3/04_esquema_por_archivo.sql",
+      "bytes": 927,
+      "sha256": "9e088b6e701fcb7c6ef701a829464c73bca6755d961f01feb5ac5f28ff26f21d"
+    },
+    {
+      "ruta": "lab8/sql/ej3/05_union_by_name.sql",
+      "bytes": 534,
+      "sha256": "2be9ca5d86a3b82b7b91b6c1bdaaa41aca9d6c22d7a3078c1c30ca9e99c92dae"
+    },
+    {
+      "ruta": "lab8/sql/ej3/06_muestra_yellow.sql",
+      "bytes": 187,
+      "sha256": "f9b0f5b3370ec5c36e15ac8b2ac1444f2d41ac577c9f1828cbd3d0bb106b7eb2"
+    },
+    {
+      "ruta": "lab8/sql/ej3/07_muestra_green.sql",
+      "bytes": 181,
+      "sha256": "a477e7bc192bcccb7c7c282bbe739e821a4767645f99512482a6f7d29461ba8c"
+    },
+    {
+      "ruta": "lab8/sql/ej3/08_resumen_yellow.sql",
+      "bytes": 180,
+      "sha256": "2ec124fc6eb27b4b4ef9d79f99dc10ab125c89f841c5f5999cfe73221a03d183"
+    },
+    {
+      "ruta": "lab8/sql/ej3/09_resumen_green.sql",
+      "bytes": 176,
+      "sha256": "c06940107eb757b4f95dfbb281c699fc3659ed420c71846f36f2a5eab68f024f"
+    },
+    {
+      "ruta": "lab8/sql/ej3/10_nulos_por_pago.sql",
+      "bytes": 896,
+      "sha256": "fe9ff7d8535943c2c59281eb6089a8de7ea01993e381960abf5bcc9f7e82c9c3"
+    },
+    {
+      "ruta": "lab8/sql/ej3/11_inconsistencias.sql",
+      "bytes": 1755,
+      "sha256": "90d8de872b9588daa2a7ab471d12f9186fd7d8a5fc235f8fbe6e1620a1ff36f5"
+    },
+    {
+      "ruta": "lab8/sql/ej3/12_duplicados.sql",
+      "bytes": 1053,
+      "sha256": "548921fdc806cd7a7ca00527253c3306b6e95b31f538adce498f3bdccb00c1e5"
+    },
+    {
+      "ruta": "lab8/sql/ej3/13_viajes_validos.sql",
+      "bytes": 456,
+      "sha256": "937a56a6db410b678a62b06a33302e80ea293ae909ac6d9e11ce5cfac1b82778"
+    },
+    {
+      "ruta": "lab8/sql/ej4/01_viajes_por_mes.sql",
+      "bytes": 239,
+      "sha256": "e7f6a26fe703ddfa6eed576196ecd1cbb923b1220be08be9aada510eb4eafae8"
+    },
+    {
+      "ruta": "lab8/sql/ej4/02_viajes_por_hora.sql",
+      "bytes": 543,
+      "sha256": "7c54d338f974273f3e6488307f4ac6589c45af22a67a57d73ada5899fa8c7451"
+    },
+    {
+      "ruta": "lab8/sql/ej4/03_viajes_por_dia.sql",
+      "bytes": 518,
+      "sha256": "105adadaefd297eec4aa14d1c7df7a8c531ca90073ac4043a070c9d2d513f8b8"
+    },
+    {
+      "ruta": "lab8/sql/ej4/04_distribuciones.sql",
+      "bytes": 1233,
+      "sha256": "8962aa5c31a1f109d01f4df3a94909e25758c036caa0c06ac87e815b82e45885"
+    },
+    {
+      "ruta": "lab8/sql/ej4/05_histogramas.sql",
+      "bytes": 746,
+      "sha256": "a2acadb0cdad8efd023728579d02d46bab04583fe1a8018d0094ee48b2fab539"
+    },
+    {
+      "ruta": "lab8/sql/ej4/06_distritos.sql",
+      "bytes": 336,
+      "sha256": "5e735544c1fc48381707383671d6caecff1c04e5a598d6c29875f96a410b99c2"
+    },
+    {
+      "ruta": "lab8/sql/ej4/07_zonas_principales.sql",
+      "bytes": 437,
+      "sha256": "ad92effcf72c23a4d32c12e41f59c7860f679d7cac68fd4bb9dd443e798b7b49"
+    },
+    {
+      "ruta": "lab8/sql/ej4/08_comparacion_tipos.sql",
+      "bytes": 1043,
+      "sha256": "a4d45301e292d3a3f03170639340765ff7118429433e315bb2cc135e34ce7c9c"
+    },
+    {
+      "ruta": "lab8/sql/ej4/09_formas_de_pago.sql",
+      "bytes": 796,
+      "sha256": "2ec8d79449824ee3676b92b1f55615d087ba3966542c3928b00482f1dd175e0c"
+    },
+    {
+      "ruta": "lab8/sql/ej4/10_composicion_total.sql",
+      "bytes": 628,
+      "sha256": "119769998e28048d76eafd1267d27c9aa23a308e21ab7fec22b819f32579cc01"
+    },
+    {
+      "ruta": "lab8/sql/ej4/11_cargo_aeropuerto.sql",
+      "bytes": 466,
+      "sha256": "c3934941547729773b5927ff7343569046430b31b07c6c1747fbdc3511edd8ea"
+    },
+    {
+      "ruta": "lab8/sql/ej4/12_atipicos.sql",
+      "bytes": 1064,
+      "sha256": "bfb1112aa88934e01909eab17dfcd08d9651bb6ecc6aed8b89927820f30ebbe0"
+    },
+    {
+      "ruta": "lab8/sql/ej4/13_flex_fare.sql",
+      "bytes": 500,
+      "sha256": "202e2b0c1be1dd09362f16d5c023611d24681296b9baa6d6810d17f1e50627e5"
+    },
+    {
+      "ruta": "lab8/sql/ej5/01_archivos_por_anio.sql",
+      "bytes": 568,
+      "sha256": "a82fea041571bcc51e21068ba3151b0d419a8271b0ebf4324f1d3e9bb52854d6"
+    },
+    {
+      "ruta": "lab8/sql/ej5/02_viajes_por_anio.sql",
+      "bytes": 628,
+      "sha256": "85735a2457bf2ac2030a0617efed428dc1f80d5d401646a6f0204fa711f12b7a"
+    },
+    {
+      "ruta": "lab8/sql/ej5/03_meses_por_anio.sql",
+      "bytes": 294,
+      "sha256": "c5902b51f56889e4f5bed8091578d207aa11b94ed4aeabca0d1d268cc59ff210"
+    },
+    {
+      "ruta": "lab8/sql/ej5/04_cargo_cbd_nulos.sql",
+      "bytes": 661,
+      "sha256": "ffedead915a6b8243c05d1a09617a7faee8824c7bafbdf8caf6fde86146ba4b2"
+    },
+    {
+      "ruta": "lab8/sql/ej8/01_enero_a_agosto.sql",
+      "bytes": 1245,
+      "sha256": "c06055b6360d1545cdb2e6f8e9b3791dc9278f589891aa853ffff13a59d5d616"
+    },
+    {
+      "ruta": "lab8/sql/ej8/02_tarifas_negativas.sql",
+      "bytes": 710,
+      "sha256": "e7a4e20d709f79518a11dc0fb6154401b6154958f142bebe6af31a2603bbfd3d"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/01_viajes_por_dia.sql",
+      "bytes": 206,
+      "sha256": "751b5869b76e925e724f0f58e6e48c1e86cfc8be6bde39a678272a5eb01e205b"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/02_total_mediano.sql",
+      "bytes": 206,
+      "sha256": "1b97537b90c1d5ebc7970ec706a2bfdbff175b3d1e7e8a1f0b4c55e62d0600e7"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/03_flex_fare.sql",
+      "bytes": 263,
+      "sha256": "59fbe1f4687b3314709a1832124e5969f255f0da2cc2a67b4fa3442c27746d03"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/04_efectivo.sql",
+      "bytes": 227,
+      "sha256": "8a80de3305845291231372408406b2f40827740b2601cf90646e9953ed3b187d"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/05_propina_tarjeta.sql",
+      "bytes": 294,
+      "sha256": "ed34903a7a028b044950b2f2f9a032eb46e4ec4e33e1fed45c3890687c6de0ad"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/06_cargo_cbd.sql",
+      "bytes": 264,
+      "sha256": "910304cd9b083d106ecd34181862baac6a080eeef18228ec39cf1b7bd5a538b8"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/07_velocidad_manhattan.sql",
+      "bytes": 469,
+      "sha256": "a6b7ae71f5210661e3d3bb50999703428bfae7d7d3b894989e8e522831c70b67"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/08_aeropuertos.sql",
+      "bytes": 307,
+      "sha256": "98a12a491714616eb9fe49369315537809c352f2f106507cf8450cb24f08d721"
+    },
+    {
+      "ruta": "lab8/sql/indicadores/09_registros_excluidos.sql",
+      "bytes": 482,
+      "sha256": "72ab045006240a16a88b2b03c5ab1f72706901feef2f19d6c0ed71f7d5b5fbfb"
+    }
+  ]
+}

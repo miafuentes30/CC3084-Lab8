@@ -1,0 +1,132 @@
+"""Renombramiento mecanico y verificable de la etapa del Pasaporte."""
+
+import json
+import re
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parents[1]
+CAMBIOS = {
+    "scripts/download_data.py": "scripts/descargar_taxis.py",
+    "scripts/verificar_descarga.py": "scripts/validar_taxis.py",
+    "scripts/verificar_ambiente.py": "scripts/comprobar_entorno.py",
+    "scripts/benchmark.py": "scripts/medir_rendimiento.py",
+    "scripts/tablero_metabase.py": "scripts/construir_tablero.py",
+    "tests/test_funcional.py": "tests/test_regresion.py",
+    "tests/fixtures.py": "tests/datos_prueba.py",
+    "tests/ejecutar_notebooks.py": "tests/validar_cuadernos.py",
+    "docs/cobertura.md": "docs/guia_ejercicios.md",
+    "docs/refactorizacion.md": "docs/arquitectura_modular.md",
+    "docs/resultados_historicos.md": "docs/evidencias_heredadas.md",
+    "docs/discusion.md": "docs/reflexion_tecnica.md",
+    "docs/verificacion_refactorizacion.md": "docs/validacion_etapa_inicial.md",
+    "docs/inventario_referencia.json": "docs/manifiesto_referencia.json",
+    "tools/migrar_referencia.py": "docs/historial/traslado_inicial.py.txt",
+    "sql/vistas.sql": "sql/normalizacion_viajes.sql",
+    "sql/comunes.sql": "sql/reglas_compartidas.sql",
+}
+MODULOS = {
+    "configuracion": "parametros", "archivos": "integridad", "descarga": "adquisicion",
+    "validacion": "completitud", "ambiente": "diagnostico", "analisis": "sesion_consultas",
+    "benchmarks": "mediciones", "catalogo": "catalogo_indicadores",
+    "indicadores": "generacion_indicadores", "metabase": "cliente_metabase",
+    "notebook": "soporte_cuadernos", "visualizacion": "graficos",
+}
+for antiguo, nuevo in MODULOS.items():
+    CAMBIOS[f"scripts/lab8/{antiguo}.py"] = f"scripts/laboratorio/{nuevo}.py"
+CAMBIOS["scripts/lab8/__init__.py"] = "scripts/laboratorio/__init__.py"
+CUADERNOS = {
+    "03_consultas_parquet": "03_inspeccion_parquet",
+    "04_analisis_exploratorio": "04_exploracion_viajes",
+    "05_incorporacion_2024": "05_integracion_2024",
+    "06_benchmark": "06_comparacion_rendimiento",
+    "07_indicadores": "07_panel_indicadores",
+    "08_analisis_completo": "08_integracion_tres_anios",
+}
+for antiguo, nuevo in CUADERNOS.items():
+    CAMBIOS[f"notebooks/{antiguo}.ipynb"] = f"notebooks/{nuevo}.ipynb"
+GRUPOS_SQL = {
+    "ej3": ("inspeccion", ["inventario_parquet", "conteos_metadatos", "comparacion_columnas",
+              "variaciones_esquema", "conciliacion_esquemas", "muestra_taxi_amarillo", "muestra_taxi_verde",
+              "perfil_taxi_amarillo", "perfil_taxi_verde", "ausencias_por_pago", "anomalias_viajes",
+              "filas_repetidas", "resumen_calidad"]),
+    "ej4": ("exploracion", ["resumen_mensual", "demanda_por_hora", "demanda_semanal", "percentiles_viajes",
+              "intervalos_distancia_cobro", "origen_por_distrito", "principales_zonas", "contraste_tipos_taxi",
+              "distribucion_pagos", "desglose_cobros", "evolucion_cargo_aeropuerto", "cobros_atipicos",
+              "tarifa_fija_aplicaciones"]),
+    "ej5": ("integracion", ["inventario_anual", "resumen_por_anio", "comparacion_meses", "efecto_nulos_cbd"]),
+    "ej8": ("comparacion_anual", ["resumen_periodos_comparables", "incidencia_tarifas_negativas"]),
+    "benchmark": ("rendimiento", ["conteo_viajes", "seleccion_diaria", "cuartiles_cobro"]),
+    "indicadores": ("metricas", ["promedio_diario", "mediana_cobro", "porcentaje_tarifa_fija",
+                    "porcentaje_efectivo", "propina_por_tarjeta", "incidencia_cargo_cbd",
+                    "velocidad_interna_manhattan", "participacion_aeropuertos", "porcentaje_exclusion"]),
+}
+for antiguo, (nuevo, nombres) in GRUPOS_SQL.items():
+    for origen in sorted((RAIZ / "sql" / antiguo).glob("*.sql")):
+        n = int(origen.name[:2])
+        CAMBIOS[origen.relative_to(RAIZ).as_posix()] = f"sql/{nuevo}/{n:02d}_{nombres[n - 1]}.sql"
+
+
+def transformar(texto):
+    # Las rutas del material original siguen siendo evidencia historica.
+    referencias = []
+    def proteger(match):
+        referencias.append(match[0])
+        return f"__REFERENCIA_CONSERVADA_{len(referencias) - 1}__"
+    texto = re.sub(r"(?<!scripts/)lab8/(?:docs|scripts|notebooks|sql|data)/[^\s`\"'<>),]+", proteger, texto)
+    for viejo, nuevo in sorted(CAMBIOS.items(), key=lambda par: -len(par[0])):
+        texto = texto.replace(viejo, nuevo)
+    for viejo, nuevo in CAMBIOS.items():
+        if viejo.endswith((".sql", ".ipynb", ".md")) or viejo.startswith(("scripts/", "tests/")):
+            texto = texto.replace(Path(viejo).name, Path(nuevo).name)
+    for viejo, nuevo in MODULOS.items():
+        texto = texto.replace(f"lab8.{viejo}", f"laboratorio.{nuevo}")
+        texto = re.sub(rf"(from\s+)\.{viejo}(\s+import\b)", rf"\1.{nuevo}\2", texto)
+    texto = texto.replace("scripts/lab8", "scripts/laboratorio")
+    texto = texto.replace('"lab8.', '"laboratorio.').replace("'lab8.", "'laboratorio.")
+    texto = re.sub(r"\bfrom fixtures import\b", "from datos_prueba import", texto)
+    for viejo, (nuevo, _) in GRUPOS_SQL.items():
+        texto = texto.replace(f"sql/{viejo}", f"sql/{nuevo}")
+        texto = texto.replace(f'"{viejo}/', f'"{nuevo}/').replace(f"'{viejo}/", f"'{nuevo}/")
+        texto = texto.replace(f"{viejo}/", f"{nuevo}/")
+    for viejo, nuevo in CUADERNOS.items():
+        texto = texto.replace(viejo, nuevo)
+    texto = texto.replace('"ej[34]/*.sql"', '"[ie]*/*.sql"')
+    for n, referencia in enumerate(referencias):
+        texto = texto.replace(f"__REFERENCIA_CONSERVADA_{n}__", referencia)
+    return texto
+
+
+def main():
+    if not (RAIZ / "scripts/lab8").is_dir():
+        raise SystemExit("El renombramiento ya se ejecuto; no se vuelve a aplicar")
+    contenidos = {}
+    for origen in [RAIZ / "README.md", *[r for carpeta in ("scripts", "notebooks", "sql", "docs", "tests")
+                    for r in (RAIZ / carpeta).rglob("*") if r.suffix in (".py", ".ipynb", ".sql", ".md")]]:
+        texto = origen.read_text(encoding="utf-8")
+        if origen.suffix == ".ipynb":
+            nb = json.loads(texto)
+            for celda in nb["cells"]:
+                celda["source"] = transformar("".join(celda["source"])).splitlines(keepends=True)
+            texto = json.dumps(nb, ensure_ascii=False, indent=1) + "\n"
+        else:
+            texto = transformar(texto)
+        destino = RAIZ / CAMBIOS.get(origen.relative_to(RAIZ).as_posix(), origen.relative_to(RAIZ).as_posix())
+        contenidos[destino] = texto
+    for viejo, nuevo in CAMBIOS.items():
+        origen, destino = RAIZ / viejo, RAIZ / nuevo
+        if destino.exists():
+            raise SystemExit(f"Destino ya existe: {destino}")
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        origen.rename(destino)
+    for destino, texto in contenidos.items():
+        destino.write_text(texto, encoding="utf-8")
+    # Solo elimina directorios vacios del codigo activo.
+    for carpeta in [RAIZ / "scripts/lab8", *[RAIZ / "sql" / nombre for nombre in GRUPOS_SQL]]:
+        if carpeta.is_dir() and not any(carpeta.iterdir()):
+            carpeta.rmdir()
+    (RAIZ / "docs/mapa_renombramientos.json").write_text(json.dumps(CAMBIOS, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"{len(CAMBIOS)} archivos renombrados; referencia lab8/ intacta")
+
+
+if __name__ == "__main__":
+    main()
