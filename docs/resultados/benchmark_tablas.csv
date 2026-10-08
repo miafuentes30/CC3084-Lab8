@@ -1,0 +1,4 @@
+conjunto,archivos,registros,mb_parquet,mb_duckdb,creacion_tabla_s,base,esquema_igual,registros_tabla,rss_pico_acumulado_bytes
+1 mes,2,3765161,65.156736,110.637056,4.586487185999999,data/processed/benchmark_runs/20261013T021526530460Z/benchmark_1_mes.duckdb,True,3765161,799801344
+8 meses,16,30040469,519.727,915.419136,113.33966612200004,data/processed/benchmark_runs/20261013T021526530460Z/benchmark_8_meses.duckdb,True,30040469,1380134912
+20 meses,40,71870407,1228.648745,2182.098944,411.1021720519998,data/processed/benchmark_runs/20261013T021526530460Z/benchmark_20_meses.duckdb,True,71870407,1418706944

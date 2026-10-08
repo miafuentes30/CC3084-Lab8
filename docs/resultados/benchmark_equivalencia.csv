@@ -1,0 +1,22 @@
+conjunto,consulta,mismo_resultado,filas_parquet,filas_tabla,tolerancia_absoluta,tolerancia_relativa
+1 mes,rendimiento/01_conteo_viajes.sql,True,2,2,0.01,0
+1 mes,rendimiento/02_seleccion_diaria.sql,True,2,2,0.01,0
+1 mes,rendimiento/03_cuartiles_cobro.sql,True,2,2,0.01,0
+1 mes,exploracion/01_resumen_mensual.sql,True,2,2,0.01,0
+1 mes,exploracion/02_demanda_por_hora.sql,True,96,96,0.01,0
+1 mes,exploracion/06_origen_por_distrito.sql,True,15,15,0.01,0
+1 mes,exploracion/09_distribucion_pagos.sql,True,10,10,0.01,0
+8 meses,rendimiento/01_conteo_viajes.sql,True,2,2,0.01,0
+8 meses,rendimiento/02_seleccion_diaria.sql,True,2,2,0.01,0
+8 meses,rendimiento/03_cuartiles_cobro.sql,True,2,2,0.01,0
+8 meses,exploracion/01_resumen_mensual.sql,True,16,16,0.01,0
+8 meses,exploracion/02_demanda_por_hora.sql,True,96,96,0.01,0
+8 meses,exploracion/06_origen_por_distrito.sql,True,15,15,0.01,0
+8 meses,exploracion/09_distribucion_pagos.sql,True,10,10,0.01,0
+20 meses,rendimiento/01_conteo_viajes.sql,True,2,2,0.01,0
+20 meses,rendimiento/02_seleccion_diaria.sql,True,2,2,0.01,0
+20 meses,rendimiento/03_cuartiles_cobro.sql,True,2,2,0.01,0
+20 meses,exploracion/01_resumen_mensual.sql,True,40,40,0.01,0
+20 meses,exploracion/02_demanda_por_hora.sql,True,96,96,0.01,0
+20 meses,exploracion/06_origen_por_distrito.sql,True,15,15,0.01,0
+20 meses,exploracion/09_distribucion_pagos.sql,True,11,11,0.01,0
