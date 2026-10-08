@@ -1,0 +1,36 @@
+{
+  "fecha_utc": "2026-10-12T21:01:16.682539+00:00",
+  "anios": [
+    2026
+  ],
+  "meses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "resumen": {
+    "descargados": 17,
+    "omitidos": 0,
+    "no_publicados": [
+      "yellow 2026-09",
+      "yellow 2026-10",
+      "yellow 2026-11",
+      "yellow 2026-12",
+      "green 2026-09",
+      "green 2026-10",
+      "green 2026-11",
+      "green 2026-12"
+    ],
+    "fallidos": [],
+    "danados": []
+  }
+}

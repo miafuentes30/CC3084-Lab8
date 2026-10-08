@@ -1,0 +1,720 @@
+{
+  "fecha_utc": "2026-10-13T04:06:44.588629+00:00",
+  "estado": "completo",
+  "anios": [
+    2024,
+    2025,
+    2026
+  ],
+  "base": "data/processed/tablero_20261013T040344827621Z.duckdb",
+  "inventario": [
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-01.parquet",
+      "periodo": "2024-01",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1362284,
+      "mtime_ns": 1791852399139238100,
+      "registros": 56551
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-02.parquet",
+      "periodo": "2024-02",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1283805,
+      "mtime_ns": 1791847780062658300,
+      "registros": 53577
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-03.parquet",
+      "periodo": "2024-03",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1372372,
+      "mtime_ns": 1791852400305036500,
+      "registros": 57457
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-04.parquet",
+      "periodo": "2024-04",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1346502,
+      "mtime_ns": 1791847781148844600,
+      "registros": 56471
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-05.parquet",
+      "periodo": "2024-05",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1453912,
+      "mtime_ns": 1791847782297781400,
+      "registros": 61003
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-06.parquet",
+      "periodo": "2024-06",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1326194,
+      "mtime_ns": 1791847783243370000,
+      "registros": 54748
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-07.parquet",
+      "periodo": "2024-07",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1250973,
+      "mtime_ns": 1791847784463873700,
+      "registros": 51837
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-08.parquet",
+      "periodo": "2024-08",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1267079,
+      "mtime_ns": 1791847785562636200,
+      "registros": 51771
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-09.parquet",
+      "periodo": "2024-09",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1326186,
+      "mtime_ns": 1791847786673757700,
+      "registros": 54440
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-10.parquet",
+      "periodo": "2024-10",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1353731,
+      "mtime_ns": 1791847787860434200,
+      "registros": 56147
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-11.parquet",
+      "periodo": "2024-11",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1264688,
+      "mtime_ns": 1791847788915225400,
+      "registros": 52222
+    },
+    {
+      "archivo": "data/raw/green/2024/green_tripdata_2024-12.parquet",
+      "periodo": "2024-12",
+      "anio": 2024,
+      "taxi": "green",
+      "bytes": 1312306,
+      "mtime_ns": 1791847790019614300,
+      "registros": 53994
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-01.parquet",
+      "periodo": "2025-01",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1178451,
+      "mtime_ns": 1791863601352985100,
+      "registros": 48326
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-02.parquet",
+      "periodo": "2025-02",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1117474,
+      "mtime_ns": 1791863603867004600,
+      "registros": 46621
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-03.parquet",
+      "periodo": "2025-03",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1253510,
+      "mtime_ns": 1791863605606081700,
+      "registros": 51539
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-04.parquet",
+      "periodo": "2025-04",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1269227,
+      "mtime_ns": 1791863606840897000,
+      "registros": 52132
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-05.parquet",
+      "periodo": "2025-05",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1338798,
+      "mtime_ns": 1791863608015908900,
+      "registros": 55399
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-06.parquet",
+      "periodo": "2025-06",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1212934,
+      "mtime_ns": 1791863609103103900,
+      "registros": 49390
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-07.parquet",
+      "periodo": "2025-07",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1188380,
+      "mtime_ns": 1791863610333760200,
+      "registros": 48205
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-08.parquet",
+      "periodo": "2025-08",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1149707,
+      "mtime_ns": 1791863611434467400,
+      "registros": 46306
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-09.parquet",
+      "periodo": "2025-09",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1209831,
+      "mtime_ns": 1791863613508238100,
+      "registros": 48893
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-10.parquet",
+      "periodo": "2025-10",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1205685,
+      "mtime_ns": 1791863614704253300,
+      "registros": 49416
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-11.parquet",
+      "periodo": "2025-11",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1164775,
+      "mtime_ns": 1791863615792071100,
+      "registros": 46912
+    },
+    {
+      "archivo": "data/raw/green/2025/green_tripdata_2025-12.parquet",
+      "periodo": "2025-12",
+      "anio": 2025,
+      "taxi": "green",
+      "bytes": 1171145,
+      "mtime_ns": 1791863616938325800,
+      "registros": 48236
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-01.parquet",
+      "periodo": "2026-01",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 991656,
+      "mtime_ns": 1791838868057965100,
+      "registros": 40272
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-02.parquet",
+      "periodo": "2026-02",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 920753,
+      "mtime_ns": 1791838869134937400,
+      "registros": 37373
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-03.parquet",
+      "periodo": "2026-03",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 1082530,
+      "mtime_ns": 1791838870258251300,
+      "registros": 44208
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-04.parquet",
+      "periodo": "2026-04",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 1075896,
+      "mtime_ns": 1791838871453313400,
+      "registros": 44238
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-05.parquet",
+      "periodo": "2026-05",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 1102947,
+      "mtime_ns": 1791838872642800700,
+      "registros": 44921
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-06.parquet",
+      "periodo": "2026-06",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 1075836,
+      "mtime_ns": 1791838873912294500,
+      "registros": 44163
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-07.parquet",
+      "periodo": "2026-07",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 1018250,
+      "mtime_ns": 1791838874921180200,
+      "registros": 41252
+    },
+    {
+      "archivo": "data/raw/green/2026/green_tripdata_2026-08.parquet",
+      "periodo": "2026-08",
+      "anio": 2026,
+      "taxi": "green",
+      "bytes": 1007530,
+      "mtime_ns": 1791838875749877200,
+      "registros": 40687
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-01.parquet",
+      "periodo": "2024-01",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 49961641,
+      "mtime_ns": 1791852372083705100,
+      "registros": 2964624
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-02.parquet",
+      "periodo": "2024-02",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 50349284,
+      "mtime_ns": 1791852378164832000,
+      "registros": 3007526
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-03.parquet",
+      "periodo": "2024-03",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 60078280,
+      "mtime_ns": 1791852387156441700,
+      "registros": 3582628
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-04.parquet",
+      "periodo": "2024-04",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 59133625,
+      "mtime_ns": 1791847721460460300,
+      "registros": 3514289
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-05.parquet",
+      "periodo": "2024-05",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 62553128,
+      "mtime_ns": 1791847732042604900,
+      "registros": 3723833
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-06.parquet",
+      "periodo": "2024-06",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 59859922,
+      "mtime_ns": 1791847737887769900,
+      "registros": 3539193
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-07.parquet",
+      "periodo": "2024-07",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 52299432,
+      "mtime_ns": 1791847742770865900,
+      "registros": 3076903
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-08.parquet",
+      "periodo": "2024-08",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 51067350,
+      "mtime_ns": 1791847753537799300,
+      "registros": 2979183
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-09.parquet",
+      "periodo": "2024-09",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 61170186,
+      "mtime_ns": 1791847759819415100,
+      "registros": 3633030
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-10.parquet",
+      "periodo": "2024-10",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 64346071,
+      "mtime_ns": 1791847765774429900,
+      "registros": 3833771
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-11.parquet",
+      "periodo": "2024-11",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 60658709,
+      "mtime_ns": 1791847770805338800,
+      "registros": 3646369
+    },
+    {
+      "archivo": "data/raw/yellow/2024/yellow_tripdata_2024-12.parquet",
+      "periodo": "2024-12",
+      "anio": 2024,
+      "taxi": "yellow",
+      "bytes": 61524085,
+      "mtime_ns": 1791847778069200900,
+      "registros": 3668371
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-01.parquet",
+      "periodo": "2025-01",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 59158238,
+      "mtime_ns": 1791863482595161600,
+      "registros": 3475226
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-02.parquet",
+      "periodo": "2025-02",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 60343086,
+      "mtime_ns": 1791863493059208900,
+      "registros": 3577543
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-03.parquet",
+      "periodo": "2025-03",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 69964745,
+      "mtime_ns": 1791863499441431500,
+      "registros": 4145257
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-04.parquet",
+      "periodo": "2025-04",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 67352824,
+      "mtime_ns": 1791863513624758500,
+      "registros": 3970553
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-05.parquet",
+      "periodo": "2025-05",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 77837865,
+      "mtime_ns": 1791863529158678600,
+      "registros": 4591845
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-06.parquet",
+      "periodo": "2025-06",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 73542954,
+      "mtime_ns": 1791863541790078900,
+      "registros": 4322960
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-07.parquet",
+      "periodo": "2025-07",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 66943728,
+      "mtime_ns": 1791863553217809500,
+      "registros": 3898963
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-08.parquet",
+      "periodo": "2025-08",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 62293743,
+      "mtime_ns": 1791863561311117900,
+      "registros": 3574091
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-09.parquet",
+      "periodo": "2025-09",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 72432945,
+      "mtime_ns": 1791863571248040800,
+      "registros": 4251015
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-10.parquet",
+      "periodo": "2025-10",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 75267589,
+      "mtime_ns": 1791863581266229400,
+      "registros": 4428699
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-11.parquet",
+      "periodo": "2025-11",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 71134255,
+      "mtime_ns": 1791863589709451800,
+      "registros": 4181444
+    },
+    {
+      "archivo": "data/raw/yellow/2025/yellow_tripdata_2025-12.parquet",
+      "periodo": "2025-12",
+      "anio": 2025,
+      "taxi": "yellow",
+      "bytes": 73701327,
+      "mtime_ns": 1791863599473123500,
+      "registros": 4305006
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-01.parquet",
+      "periodo": "2026-01",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 64165080,
+      "mtime_ns": 1791838808776123800,
+      "registros": 3724889
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-02.parquet",
+      "periodo": "2026-02",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 58683353,
+      "mtime_ns": 1791838820182970900,
+      "registros": 3399866
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-03.parquet",
+      "periodo": "2026-03",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 67891249,
+      "mtime_ns": 1791838827938451000,
+      "registros": 3952451
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-04.parquet",
+      "periodo": "2026-04",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 64818115,
+      "mtime_ns": 1791838837247698500,
+      "registros": 3831240
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-05.parquet",
+      "periodo": "2026-05",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 69699174,
+      "mtime_ns": 1791838844752629800,
+      "registros": 4090836
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-06.parquet",
+      "periodo": "2026-06",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 65465637,
+      "mtime_ns": 1791838853333717200,
+      "registros": 3837248
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-07.parquet",
+      "periodo": "2026-07",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 61685033,
+      "mtime_ns": 1791838860405907600,
+      "registros": 3530109
+    },
+    {
+      "archivo": "data/raw/yellow/2026/yellow_tripdata_2026-08.parquet",
+      "periodo": "2026-08",
+      "anio": 2026,
+      "taxi": "yellow",
+      "bytes": 59043961,
+      "mtime_ns": 1791838866241087700,
+      "registros": 3336716
+    }
+  ],
+  "tablas": [
+    {
+      "tabla": "i1_viajes_por_dia",
+      "filas": 64,
+      "segundos": 13.255913949002206
+    },
+    {
+      "tabla": "i2_total_mediano",
+      "filas": 64,
+      "segundos": 12.030701033000696
+    },
+    {
+      "tabla": "i3_flex_fare",
+      "filas": 64,
+      "segundos": 11.457535312999426
+    },
+    {
+      "tabla": "i4_efectivo",
+      "filas": 64,
+      "segundos": 10.651078085000336
+    },
+    {
+      "tabla": "i5_propina_tarjeta",
+      "filas": 64,
+      "segundos": 11.030406743002459
+    },
+    {
+      "tabla": "i6_cargo_cbd",
+      "filas": 64,
+      "segundos": 11.201782049998656
+    },
+    {
+      "tabla": "i7_velocidad_manhattan",
+      "filas": 64,
+      "segundos": 15.190434007999102
+    },
+    {
+      "tabla": "i8_aeropuertos",
+      "filas": 64,
+      "segundos": 12.196360410000125
+    },
+    {
+      "tabla": "i9_registros_excluidos",
+      "filas": 64,
+      "segundos": 10.20016705999933
+    }
+  ],
+  "sql": {
+    "i1_viajes_por_dia": "-- I1 Viajes válidos por día en cada mes\nSELECT\n    periodo,\n    taxi,\n    viajes_por_dia AS valor,\n    viajes AS viajes_validos,\n    day(last_day(periodo)) AS dias\nFROM viajes_por_mes\nORDER BY taxi DESC, periodo",
+    "i2_total_mediano": "-- I2 Total cobrado en el viaje mediano, en dólares\nSELECT\n    periodo,\n    taxi,\n    round(median(total_amount), 2) AS valor\nFROM viajes_validos\nGROUP BY periodo, taxi\nORDER BY taxi DESC, periodo",
+    "i3_flex_fare": "-- I3 Porcentaje de viajes Flex Fare (payment_type 0 en amarillos, nulo en verdes)\nSELECT\n    periodo,\n    taxi,\n    round(100 * avg((coalesce(payment_type, 0) = 0)::INT), 1) AS valor\nFROM viajes_validos\nGROUP BY periodo, taxi\nORDER BY taxi DESC, periodo",
+    "i4_efectivo": "-- I4 Porcentaje de viajes pagados en efectivo\nSELECT\n    periodo,\n    taxi,\n    round(100 * avg((coalesce(payment_type, 0) = 2)::INT), 1) AS valor\nFROM viajes_validos\nGROUP BY periodo, taxi\nORDER BY taxi DESC, periodo",
+    "i5_propina_tarjeta": "-- I5 Propina promedio como porcentaje de la tarifa en viajes pagados con tarjeta\nSELECT\n    periodo,\n    taxi,\n    round(100 * avg(tip_amount / fare_amount), 1) AS valor\nFROM viajes_validos\nWHERE payment_type = 1 AND fare_amount > 0\nGROUP BY periodo, taxi\nORDER BY taxi DESC, periodo",
+    "i6_cargo_cbd": "-- I6 Porcentaje de viajes que pagan el cargo de la zona de congestión de Manhattan (CBD)\nSELECT\n    periodo,\n    taxi,\n    round(100 * avg((cbd_congestion_fee > 0)::INT), 1) AS valor\nFROM viajes_validos\nGROUP BY periodo, taxi\nORDER BY taxi DESC, periodo",
+    "i7_velocidad_manhattan": "-- I7 Velocidad mediana, en millas por hora, de los viajes que empiezan y terminan en Manhattan\nSELECT\n    v.periodo,\n    v.taxi,\n    round(median(v.trip_distance / (v.duracion_min / 60)), 2) AS valor\nFROM viajes_validos AS v\nJOIN zonas AS inicio ON v.PULocationID = inicio.zona_id\nJOIN zonas AS fin ON v.DOLocationID = fin.zona_id\nWHERE inicio.distrito = 'Manhattan' AND fin.distrito = 'Manhattan'\nGROUP BY v.periodo, v.taxi\nORDER BY v.taxi DESC, v.periodo",
+    "i8_aeropuertos": "-- I8 Porcentaje de viajes que empiezan o terminan en Newark (1), JFK (132) o LaGuardia (138)\nSELECT\n    periodo,\n    taxi,\n    round(100 * avg((PULocationID IN (1, 132, 138) OR DOLocationID IN (1, 132, 138))::INT), 1) AS valor\nFROM viajes_validos\nGROUP BY periodo, taxi\nORDER BY taxi DESC, periodo",
+    "i9_registros_excluidos": "-- I9 Porcentaje de registros que no pasan las reglas de calidad de viajes_validos\nWITH registros AS (\n    SELECT periodo, taxi, count(*) AS total\n    FROM viajes\n    GROUP BY periodo, taxi\n),\nvalidos AS (\n    SELECT periodo, taxi, count(*) AS validos\n    FROM viajes_validos\n    GROUP BY periodo, taxi\n)\nSELECT\n    periodo,\n    taxi,\n    round(100 * (1 - coalesce(validos, 0) / total), 2) AS valor\nFROM registros\nLEFT JOIN validos USING (periodo, taxi)\nORDER BY taxi DESC, periodo"
+  },
+  "sql_sha256": {
+    "i1_viajes_por_dia": "d64df18220e19783983e423b3bd9042022aa1d6884405cd720cd383b23c2e947",
+    "i2_total_mediano": "ff89a1b49448fe41376b5a88930c72a28c6bd7fc9ca78d44242ecee94e160528",
+    "i3_flex_fare": "b75997c1856931bf10a0e04f22c9b19b00d0c1253ae3a3743516c933c8982632",
+    "i4_efectivo": "3843c441ef57052c9f9acbea54a4e5d6230f25b99fd2efd0783ae3bb2e258b90",
+    "i5_propina_tarjeta": "ecca956f7116214e7b55eddd1eee201a3f37b1bb994c1860e43e8dc50d915e37",
+    "i6_cargo_cbd": "5ee6fdaf368d0ac8a0dc45183f30d5eba42fbcfcb6baee2e0531b602a8401427",
+    "i7_velocidad_manhattan": "9c01f5df6d9bdb7f9cee2bc296424e83e3cc93c0b0fa6fa51c0138dc920163ba",
+    "i8_aeropuertos": "c47492297bd884395712276792ee0a37c3c99ee891e806bf777ed24eea95702b",
+    "i9_registros_excluidos": "27422fb2bdb9d11c5544f4eee5e2be03fe05a9acf3cb2f0651fd750bd7b6ee29"
+  },
+  "configuracion": {
+    "threads": 2,
+    "memory_limit": "1GiB",
+    "temp_directory": "/workspace/data/processed/temporales_indicadores",
+    "max_temp_directory_size": "2GiB",
+    "preserve_insertion_order": "false"
+  },
+  "recursos_iniciales": {
+    "MemTotal": 4035731456,
+    "MemAvailable": 3126956032,
+    "SwapTotal": 1073741824,
+    "SwapFree": 1073741824,
+    "cgroup_limite_bytes": 9223372036854771712,
+    "cgroup_uso_bytes": 182657024,
+    "disponible_efectiva_bytes": 3126956032
+  },
+  "periodos_reutilizados": [
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "bytes_base": 2633728,
+  "sql_comparacion": "-- Indicadores de enero a agosto de cada año, los meses disponibles en los tres años\nWITH base AS (\n    SELECT\n        v.*,\n        year(v.periodo) AS anio,\n        inicio.distrito = 'Manhattan' AND fin.distrito = 'Manhattan' AS dentro_de_manhattan\n    FROM viajes_validos AS v\n    LEFT JOIN zonas AS inicio ON v.PULocationID = inicio.zona_id\n    LEFT JOIN zonas AS fin ON v.DOLocationID = fin.zona_id\n    WHERE month(v.periodo) <= 8\n), dias AS (\n    SELECT year(periodo) AS anio,\n           sum(day(last_day(periodo))) AS dias_calendario\n    FROM (SELECT DISTINCT periodo FROM viajes WHERE month(periodo) <= 8)\n    GROUP BY anio\n)\nSELECT\n    anio,\n    taxi,\n    count(*) AS viajes_validos,\n    any_value(dias_calendario) AS dias_calendario,\n    round(count(*) / any_value(dias_calendario), 2) AS viajes_por_dia,\n    round(avg(trip_distance), 2) AS distancia_prom,\n    round(avg(duracion_min), 2) AS duracion_prom_min,\n    round(avg(total_amount), 2) AS total_prom,\n    round(median(total_amount), 2) AS total_mediano,\n    round(100 * avg((coalesce(payment_type, 0) = 0)::INT), 1) AS pct_flex_fare,\n    round(100 * avg((coalesce(payment_type, 0) = 2)::INT), 1) AS pct_efectivo,\n    round(100 * avg(tip_amount / fare_amount) FILTER (WHERE payment_type = 1 AND fare_amount > 0), 1) AS propina_pct_tarifa,\n    round(100 * avg((cbd_congestion_fee > 0)::INT), 1) AS pct_cargo_cbd,\n    round(median(trip_distance / (duracion_min / 60)) FILTER (WHERE dentro_de_manhattan), 2) AS velocidad_manhattan,\n    round(100 * avg((PULocationID IN (1, 132, 138) OR DOLocationID IN (1, 132, 138))::INT), 1) AS pct_aeropuerto\nFROM base JOIN dias USING (anio)\nGROUP BY anio, taxi\nORDER BY taxi DESC, anio\n",
+  "comparacion_ejecucion": "Medias y conteos, mediana del monto y mediana de velocidad en tres consultas secuenciales por año; 1 hilo, 1 GiB",
+  "sql_comparacion_ejecutado": {
+    "2024": {
+      "medias": "SELECT 2024 AS anio, taxi, count(*) AS viajes_validos,\n        244 AS dias_calendario, round(count(*) / 244, 2) AS viajes_por_dia,\n        round(avg(trip_distance), 2) AS distancia_prom,\n        round(avg(duracion_min), 2) AS duracion_prom_min,\n        round(avg(total_amount), 2) AS total_prom, NULL::DOUBLE AS total_mediano,\n        round(100 * avg((coalesce(payment_type, 0) = 0)::INT), 1) AS pct_flex_fare,\n        round(100 * avg((coalesce(payment_type, 0) = 2)::INT), 1) AS pct_efectivo,\n        round(100 * avg(tip_amount / fare_amount) FILTER (WHERE payment_type = 1 AND fare_amount > 0), 1) AS propina_pct_tarifa,\n        round(100 * avg((cbd_congestion_fee > 0)::INT), 1) AS pct_cargo_cbd,\n        NULL::DOUBLE AS velocidad_manhattan,\n        round(100 * avg((PULocationID IN (1, 132, 138) OR DOLocationID IN (1, 132, 138))::INT), 1) AS pct_aeropuerto\n        FROM viajes_validos GROUP BY taxi ORDER BY taxi DESC",
+      "mediana_monto": "SELECT taxi, round(median(total_amount), 2) FROM viajes_validos GROUP BY taxi",
+      "mediana_velocidad": "SELECT v.taxi, round(median(v.trip_distance / (v.duracion_min / 60)), 2)\n            FROM viajes_validos v JOIN zonas i ON v.PULocationID = i.zona_id JOIN zonas f ON v.DOLocationID = f.zona_id\n            WHERE i.distrito = 'Manhattan' AND f.distrito = 'Manhattan' GROUP BY v.taxi"
+    },
+    "2025": {
+      "medias": "SELECT 2025 AS anio, taxi, count(*) AS viajes_validos,\n        243 AS dias_calendario, round(count(*) / 243, 2) AS viajes_por_dia,\n        round(avg(trip_distance), 2) AS distancia_prom,\n        round(avg(duracion_min), 2) AS duracion_prom_min,\n        round(avg(total_amount), 2) AS total_prom, NULL::DOUBLE AS total_mediano,\n        round(100 * avg((coalesce(payment_type, 0) = 0)::INT), 1) AS pct_flex_fare,\n        round(100 * avg((coalesce(payment_type, 0) = 2)::INT), 1) AS pct_efectivo,\n        round(100 * avg(tip_amount / fare_amount) FILTER (WHERE payment_type = 1 AND fare_amount > 0), 1) AS propina_pct_tarifa,\n        round(100 * avg((cbd_congestion_fee > 0)::INT), 1) AS pct_cargo_cbd,\n        NULL::DOUBLE AS velocidad_manhattan,\n        round(100 * avg((PULocationID IN (1, 132, 138) OR DOLocationID IN (1, 132, 138))::INT), 1) AS pct_aeropuerto\n        FROM viajes_validos GROUP BY taxi ORDER BY taxi DESC",
+      "mediana_monto": "SELECT taxi, round(median(total_amount), 2) FROM viajes_validos GROUP BY taxi",
+      "mediana_velocidad": "SELECT v.taxi, round(median(v.trip_distance / (v.duracion_min / 60)), 2)\n            FROM viajes_validos v JOIN zonas i ON v.PULocationID = i.zona_id JOIN zonas f ON v.DOLocationID = f.zona_id\n            WHERE i.distrito = 'Manhattan' AND f.distrito = 'Manhattan' GROUP BY v.taxi"
+    },
+    "2026": {
+      "medias": "SELECT 2026 AS anio, taxi, count(*) AS viajes_validos,\n        243 AS dias_calendario, round(count(*) / 243, 2) AS viajes_por_dia,\n        round(avg(trip_distance), 2) AS distancia_prom,\n        round(avg(duracion_min), 2) AS duracion_prom_min,\n        round(avg(total_amount), 2) AS total_prom, NULL::DOUBLE AS total_mediano,\n        round(100 * avg((coalesce(payment_type, 0) = 0)::INT), 1) AS pct_flex_fare,\n        round(100 * avg((coalesce(payment_type, 0) = 2)::INT), 1) AS pct_efectivo,\n        round(100 * avg(tip_amount / fare_amount) FILTER (WHERE payment_type = 1 AND fare_amount > 0), 1) AS propina_pct_tarifa,\n        round(100 * avg((cbd_congestion_fee > 0)::INT), 1) AS pct_cargo_cbd,\n        NULL::DOUBLE AS velocidad_manhattan,\n        round(100 * avg((PULocationID IN (1, 132, 138) OR DOLocationID IN (1, 132, 138))::INT), 1) AS pct_aeropuerto\n        FROM viajes_validos GROUP BY taxi ORDER BY taxi DESC",
+      "mediana_monto": "SELECT taxi, round(median(total_amount), 2) FROM viajes_validos GROUP BY taxi",
+      "mediana_velocidad": "SELECT v.taxi, round(median(v.trip_distance / (v.duracion_min / 60)), 2)\n            FROM viajes_validos v JOIN zonas i ON v.PULocationID = i.zona_id JOIN zonas f ON v.DOLocationID = f.zona_id\n            WHERE i.distrito = 'Manhattan' AND f.distrito = 'Manhattan' GROUP BY v.taxi"
+    }
+  },
+  "contratos_sha256": {
+    "normalizacion_viajes.sql": "fdf52ccd257fe47021f24d42b5083963aff2936e7346e65ef056f9ae7f0c79ff",
+    "reglas_compartidas.sql": "4e8529277cc5523c322b02e1fe6c8b20466aebf0d14fb38c06bc54140f1b426c",
+    "zonas": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed"
+  }
+}
